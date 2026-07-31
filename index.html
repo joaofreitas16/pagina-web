@@ -1,3 +1,442 @@
-<h1>Meu blog Musical</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroTech Brasil</title>
 
-<p>Vou compartilhar conhecimentos de músicas.</p>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f4f4;
+color:#333;
+}
+
+header{
+background:#2E7D32;
+color:#fff;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+header h1{
+font-size:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+.banner{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.banner h2{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.banner p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.banner button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+background:#4CAF50;
+color:white;
+border-radius:5px;
+cursor:pointer;
+transition:.4s;
+}
+
+.banner button:hover{
+background:#1B5E20;
+}
+
+section{
+padding:90px 8%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#2E7D32;
+font-size:38px;
+}
+
+.sobre{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.sobre img{
+width:100%;
+border-radius:10px;
+}
+
+.sobre p{
+font-size:18px;
+line-height:1.8;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin:20px 0;
+color:#2E7D32;
+}
+
+.card p{
+line-height:1.6;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+transition:.4s;
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+.numeros{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.numero{
+background:#2E7D32;
+color:white;
+padding:40px;
+border-radius:10px;
+}
+
+.numero h3{
+font-size:40px;
+margin-bottom:10px;
+}
+
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,textarea{
+padding:15px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button.enviar{
+background:#2E7D32;
+color:white;
+padding:15px;
+font-size:18px;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+button.enviar:hover{
+background:#1B5E20;
+}
+
+footer{
+background:#1B5E20;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.banner h2{
+font-size:36px;
+}
+
+.sobre{
+grid-template-columns:1fr;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌱 AgroTech Brasil</h1>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#galeria">Galeria</a>
+<a href="#estatisticas">Resultados</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+<section class="banner" id="inicio">
+
+<div>
+
+<h2>Tecnologia e Inovação no Campo</h2>
+
+<p>
+Produção agrícola e pecuária com sustentabilidade, eficiência e qualidade.
+</p>
+
+<button onclick="rolar()">Conheça Mais</button>
+
+</div>
+
+</section>
+
+<section id="sobre">
+
+<h2>Sobre a Empresa</h2>
+
+<div class="sobre">
+
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<p>
+
+A AgroTech Brasil atua no agronegócio oferecendo soluções completas para agricultura e pecuária. Trabalhamos com produção sustentável, utilização de tecnologias modernas e equipamentos de última geração para garantir alta produtividade.
+
+</p>
+
+<br>
+
+<p>
+
+Nosso compromisso é produzir alimentos de qualidade, respeitando o meio ambiente e valorizando o produtor rural.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="servicos">
+
+<h2>Nossos Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+<h1>🌾</h1>
+<h3>Agricultura</h3>
+<p>Plantio de soja, milho, trigo, café, feijão e diversas culturas.</p>
+</div>
+
+<div class="card">
+<h1>🐄</h1>
+<h3>Pecuária</h3>
+<p>Criação de bovinos de corte e leite utilizando manejo moderno.</p>
+</div>
+
+<div class="card">
+<h1>🚜</h1>
+<h3>Máquinas Agrícolas</h3>
+<p>Equipamentos modernos para maior produtividade no campo.</p>
+</div>
+
+<div class="card">
+<h1>🌱</h1>
+<h3>Consultoria Rural</h3>
+<p>Planejamento agrícola e assistência técnica especializada.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="galeria">
+
+<h2>Galeria</h2>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section id="estatisticas">
+
+<h2>Nossos Resultados</h2>
+
+<div class="numeros">
+
+<div class="numero">
+<h3>25+</h3>
+<p>Anos de Experiência</p>
+</div>
+
+<div class="numero">
+<h3>1.500+</h3>
+<p>Clientes Atendidos</p>
+</div>
+
+<div class="numero">
+<h3>50.000 ha</h3>
+<p>Área Cultivada</p>
+</div>
+
+<div class="numero">
+<h3>99%</h3>
+<p>Satisfação</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contato">
+
+<h2>Contato</h2>
+
+<form id="formulario">
+
+<input type="text" placeholder="Nome" required>
+
+<input type="email" placeholder="E-mail" required>
+
+<input type="tel" placeholder="Telefone">
+
+<textarea rows="6" placeholder="Digite sua mensagem"></textarea>
+
+<button class="enviar">Enviar Mensagem</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<h3>🌱 AgroTech Brasil</h3>
+
+<p>Rua do Agronegócio, 1000 - Brasil</p>
+
+<p>Email: contato@agrotech.com.br</p>
+
+<p>Telefone: (00) 99999-9999</p>
+
+<br>
+
+<p>© 2026 AgroTech Brasil - Todos os direitos reservados.</p>
+
+</footer>
+
+<script>
+function rolar(){
+document.getElementById("sobre").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+document.getElementById("formulario").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Mensagem enviada com sucesso! Entraremos em contato.");
+
+this.reset();
+
+});
+</script>
+
+</body>
+</html>
