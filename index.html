@@ -1,442 +1,148 @@
+index.html
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AgroTech Brasil</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#f4f4f4;
-color:#333;
-}
-
-header{
-background:#2E7D32;
-color:#fff;
-padding:20px 50px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
-}
-
-header h1{
-font-size:30px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:bold;
-transition:.3s;
-}
-
-nav a:hover{
-color:#FFD54F;
-}
-
-.banner{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.banner h2{
-font-size:55px;
-margin-bottom:20px;
-}
-
-.banner p{
-font-size:22px;
-margin-bottom:30px;
-}
-
-.banner button{
-padding:15px 35px;
-font-size:18px;
-border:none;
-background:#4CAF50;
-color:white;
-border-radius:5px;
-cursor:pointer;
-transition:.4s;
-}
-
-.banner button:hover{
-background:#1B5E20;
-}
-
-section{
-padding:90px 8%;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-color:#2E7D32;
-font-size:38px;
-}
-
-.sobre{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.sobre img{
-width:100%;
-border-radius:10px;
-}
-
-.sobre p{
-font-size:18px;
-line-height:1.8;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 10px 20px rgba(0,0,0,.15);
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card h3{
-margin:20px 0;
-color:#2E7D32;
-}
-
-.card p{
-line-height:1.6;
-}
-
-.galeria{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.galeria img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:10px;
-transition:.4s;
-}
-
-.galeria img:hover{
-transform:scale(1.05);
-}
-
-.numeros{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-text-align:center;
-}
-
-.numero{
-background:#2E7D32;
-color:white;
-padding:40px;
-border-radius:10px;
-}
-
-.numero h3{
-font-size:40px;
-margin-bottom:10px;
-}
-
-form{
-max-width:700px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-
-input,textarea{
-padding:15px;
-font-size:17px;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-button.enviar{
-background:#2E7D32;
-color:white;
-padding:15px;
-font-size:18px;
-border:none;
-cursor:pointer;
-border-radius:5px;
-}
-
-button.enviar:hover{
-background:#1B5E20;
-}
-
-footer{
-background:#1B5E20;
-color:white;
-padding:30px;
-text-align:center;
-}
-
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-}
-
-nav{
-margin-top:15px;
-}
-
-.banner h2{
-font-size:36px;
-}
-
-.sobre{
-grid-template-columns:1fr;
-}
-
-}
-</style>
-
+<title>Blog</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
 <header>
-
-<h1>🌱 AgroTech Brasil</h1>
-
-<nav>
-<a href="#inicio">Início</a>
-<a href="#sobre">Sobre</a>
-<a href="#servicos">Serviços</a>
-<a href="#galeria">Galeria</a>
-<a href="#estatisticas">Resultados</a>
-<a href="#contato">Contato</a>
-</nav>
-
+<h1>Meu blog tech</h1>
+<p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
 </header>
-
-<section class="banner" id="inicio">
-
+<main>
+<article>
+<img src="imagens/xj6.jpeg"
+alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
 <div>
+<h2>Meu primeiro post</h2>
+<p class="artigo-autor">Por: Marcelo Paludetto</p>
+<p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
+tecnologia.</p>
 
-<h2>Tecnologia e Inovação no Campo</h2>
-
-<p>
-Produção agrícola e pecuária com sustentabilidade, eficiência e qualidade.
-</p>
-
-<button onclick="rolar()">Conheça Mais</button>
-
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
 </div>
+</article>
 
-</section>
-
-<section id="sobre">
-
-<h2>Sobre a Empresa</h2>
-
-<div class="sobre">
-
-<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80">
-
+<article>
+<img src="imagens/s1000.jpg"
+alt="Ilustração do planeta Terra cercado por elementos digitais, representando a conectividade global e a tecnologia.">
 <div>
+<h2>A quantidade de dados no mundo é surreal</h2>
+<p class="artigo-autor">Por: Marcelo Paludetto</p>
+<p>Estima-se que 90% de todos os dados existentes no mundo hoje foram gerados apenas nos últimos dois
+anos. Vivemos em uma verdadeira explosão de informação que não para de acelerar.</p>
 
-<p>
+<p class="artigo-fonte">Fonte: Jornal
+Opção
+</p>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
 
-A AgroTech Brasil atua no agronegócio oferecendo soluções completas para agricultura e pecuária. Trabalhamos com produção sustentável, utilização de tecnologias modernas e equipamentos de última geração para garantir alta produtividade.
-
+<article>
+<img src="imagem-mouse.jpg"
+alt="Ilustração de uma caixa de madeira com tampa e encaixe, representando armazenamento ou organização.">
+<div>
+<h2>O primeiro mouse não era de plástico</h2>
+<p class="artigo-autor">Por: Giulliana Cestari</p>
+<p>Antes do design ergonômico e das luzes RGB, o primeiro mouse do mundo foi construído em madeira!
+Criado por Douglas Engelbart em 1964, ele tinha o formato de uma caixa quadrada e apenas um botão.
 </p>
 
-<br>
+<p class="artigo-fonte">Fonte: TechTudo.</p>
 
-<p>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
 
-Nosso compromisso é produzir alimentos de qualidade, respeitando o meio ambiente e valorizando o produtor rural.
+<article>
+<img src="imagem-bluetooth.jpg"
+alt="Ilustração de dentes com coloração azul apresentando cáries, rachaduras e manchas próximas à gengiva.">
+<div>
+<h2>Por que o Bluetooth se chama assim?</h2>
+<p class="artigo-autor">Por: Giulliana Cestari</p>
+<p>O nome é uma homenagem ao rei viking Harald
+Blatand Gormsson, que unificou tribos da Escandinávia. Seu apelido era Harald "Bluetooth" porque
+seus
+dentes eram tão podres que tinham uma coloração azul escura.</p>
 
+<p class="artigo-fonte">Fonte: TechTudo
 </p>
 
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
 </div>
+</article>
 
+<article>
+<img src="imagem-bug.jpg"
+alt="Ilustração de uma mariposa com asas abertas em tons de marrom, com padrões circulares nas asas.">
+<div>
+<h2>O "Bug" que era um bicho de verdade</h2>
+<p class="artigo-autor">Por: Giulliana Cestari</p>
+<p>O termo "bug" (inseto) para erros de software ficou famoso em 1947, quando engenheiros encontraram
+uma mariposa real presa dentro do computador Harvard Mark II, causando uma falha no sistema.</p>
+
+<p class="artigo-fonte">Fonte: Educa
+Mais Brasil</p>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
 </div>
+</article>
 
-</section>
+<article>
+<img src="imagem-webcam.jpg"
+alt="Ilustração de uma câmera em tripé ao lado de uma cafeteira preparando café.">
+<div>
+<h2>A primeira webcam servia para vigiar café</h2>
+<p class="artigo-autor">Por: Giulliana Cestari</p>
+<p>Em 1991, pesquisadores da Universidade de Cambridge criaram a primeira webcam para não perderem tempo
+indo até a cozinha e encontrando a cafeteira vazia. Eles monitoravam o nível do café em tempo real
+nos seus monitores.</p>
 
-<section id="servicos">
+<p class="artigo-fonte">Fonte: BBC</p>
 
-<h2>Nossos Serviços</h2>
-
-<div class="cards">
-
-<div class="card">
-<h1>🌾</h1>
-<h3>Agricultura</h3>
-<p>Plantio de soja, milho, trigo, café, feijão e diversas culturas.</p>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
 </div>
+</article>
 
-<div class="card">
-<h1>🐄</h1>
-<h3>Pecuária</h3>
-<p>Criação de bovinos de corte e leite utilizando manejo moderno.</p>
+<article>
+<img src="imagem-xj6.jpeg"
+alt="Ilustração de uma máquina sobre uma fita com números e símbolos, representando o processamento de dados.">
+<div>
+<h2>O primeiro computador não foi a máquina de Turing?</h2>
+<p class="artigo-autor">Por: Felipe Gibertoni</p>
+<p>Apesar de Alan Turing ser conhecido como pai da computação, ele não criou o primeiro computador.
+Entre os primeiros computadores, um deles foi chamado Colossus projetado por Tommy Flowers durante a
+Segunda Guerra Mundial e também, praticamente na mesma época, o ENIAC foi projetado por J. Presper
+Eckert e John Mauchly.
+
+<br><br>Embora o Colossus tenha funcionado antes como um "herói de guerra" especializado, o ENIAC é
+frequentemente chamado de "pai" por ser o primeiro programável de uso geral.
+
+<br><br>E aí, qual você consideraria como o primeiro computador?
+</p>
+
+<p class="artigo-fonte">Fonte: The National
+Museum
+of Computing</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
 </div>
+</article>
+</main>
 
-<div class="card">
-<h1>🚜</h1>
-<h3>Máquinas Agrícolas</h3>
-<p>Equipamentos modernos para maior produtividade no campo.</p>
-</div>
-
-<div class="card">
-<h1>🌱</h1>
-<h3>Consultoria Rural</h3>
-<p>Planejamento agrícola e assistência técnica especializada.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="galeria">
-
-<h2>Galeria</h2>
-
-<div class="galeria">
-
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80">
-
-<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80">
-
-<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80">
-
-<img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?auto=format&fit=crop&w=900&q=80">
-
-</div>
-
-</section>
-
-<section id="estatisticas">
-
-<h2>Nossos Resultados</h2>
-
-<div class="numeros">
-
-<div class="numero">
-<h3>25+</h3>
-<p>Anos de Experiência</p>
-</div>
-
-<div class="numero">
-<h3>1.500+</h3>
-<p>Clientes Atendidos</p>
-</div>
-
-<div class="numero">
-<h3>50.000 ha</h3>
-<p>Área Cultivada</p>
-</div>
-
-<div class="numero">
-<h3>99%</h3>
-<p>Satisfação</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contato">
-
-<h2>Contato</h2>
-
-<form id="formulario">
-
-<input type="text" placeholder="Nome" required>
-
-<input type="email" placeholder="E-mail" required>
-
-<input type="tel" placeholder="Telefone">
-
-<textarea rows="6" placeholder="Digite sua mensagem"></textarea>
-
-<button class="enviar">Enviar Mensagem</button>
-
-</form>
-
-</section>
-
-<footer>
-
-<h3>🌱 AgroTech Brasil</h3>
-
-<p>Rua do Agronegócio, 1000 - Brasil</p>
-
-<p>Email: contato@agrotech.com.br</p>
-
-<p>Telefone: (00) 99999-9999</p>
-
-<br>
-
-<p>© 2026 AgroTech Brasil - Todos os direitos reservados.</p>
-
-</footer>
-
-<script>
-function rolar(){
-document.getElementById("sobre").scrollIntoView({
-behavior:"smooth"
-});
-}
-
-document.getElementById("formulario").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-alert("Mensagem enviada com sucesso! Entraremos em contato.");
-
-this.reset();
-
-});
-</script>
-
+<script src="script.js"></script>
 </body>
+
 </html>
